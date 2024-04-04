@@ -7,7 +7,6 @@ pipeline{
     stages{
         stage('Install'){
             steps{
-                sh 'chown -R 115:122 "~/.npm"'
                 sh 'ls'
                 echo 'Installing dependencies...'
                 sh 'npm install'
