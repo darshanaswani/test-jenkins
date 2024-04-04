@@ -2,6 +2,7 @@ pipeline{
     agent {
         docker {
             image 'node:18.16.0'
+            args '-e NPM_CONFIG_CACHE=.npm'
         }
     }
     stages{
