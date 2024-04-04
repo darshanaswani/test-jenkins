@@ -9,13 +9,15 @@ pipeline{
             steps{
                 sh 'ls'
                 echo 'Installing dependencies...'
-                sh 'node --version'
-                sh 'npm --version'
-                sh 'ls'
-             
+                sh 'npm install'
             }
         }
 
-
+        stage('Build'){
+            steps{
+                echo 'Building the application...'
+                sh 'npm run build'
+            }
+        }
 }
 }
