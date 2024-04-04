@@ -1,7 +1,7 @@
 pipeline{
     agent {
         docker {
-            image 'node:18.16.0-alpine'
+            image 'node:18.16.0'
         }
     }
     stages{
@@ -9,7 +9,6 @@ pipeline{
             steps{
                 sh 'ls'
                 echo 'Installing dependencies...'
-                sh 'sudo chown -R 115:122 "/.npm"'
                 sh 'npm install'
             }
         }
