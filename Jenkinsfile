@@ -2,7 +2,7 @@ pipeline{
     agent {
         docker {
             image 'node:18.16.0'
-            args '-e NPM_CONFIG_CACHE=/var/jenkins_home/.npm'
+            args '-u jenkins -e NPM_CONFIG_CACHE=/var/jenkins_home/.npm'
         }
     }
     stages{
