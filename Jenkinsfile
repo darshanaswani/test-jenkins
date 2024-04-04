@@ -1,13 +1,12 @@
 pipeline{
     agent {
         docker {
-            image 'node:18.16.0'
+            image 'node:20-alpine'
         }
     }
     stages{
         stage('Install'){
             steps{
-                sh 'npm cache clean --force '
                 echo 'Installing dependencies...'
                 sh 'npm install'
             }
