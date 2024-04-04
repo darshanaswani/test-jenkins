@@ -10,7 +10,7 @@ pipeline{
             steps{
                 // sh "ls"
                 echo 'Installing dependencies...'
-                sh 'npm install --legacy-peer-deps'
+                sh 'npm install'
             }
         }
 
