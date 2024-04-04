@@ -9,6 +9,7 @@ pipeline{
             steps{
                 sh 'ls'
                 echo 'Installing dependencies...'
+                sh 'sudo chown -R 115:122 "/.npm"'
                 sh 'npm install'
             }
         }
